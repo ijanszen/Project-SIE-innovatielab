@@ -1,16 +1,20 @@
 <template>
-    <b-navbar variant="light" style="background-color: #e3f2fd;" type="light">
-    <b-navbar-nav > 
-      <b-link to="home" router-tag="b-nav-item">Home</b-link>
-      <b-link to="netatmo" router-tag="b-nav-item">Netatmo</b-link>
-      <b-link to="nanoleaf" router-tag="b-nav-item">Nanoleaf</b-link>
-      <b-link to="flowerpot" router-tag="b-nav-item">Parrot Flower Pot</b-link>
-    </b-navbar-nav>
+    <b-navbar type="light" variant="faded">
+    <b-navbar-brand class="brand" to="home">
+      <img src="../../assets/hu.jpg" width="100%" alt="HU">
+    </b-navbar-brand>
+
+    <b-navbar-nav> 
+      <b-nav-item to="home">Home</b-nav-item>
+      <b-nav-item to="netatmo">Netatmo</b-nav-item>
+      <b-nav-item to="nanoleaf">Nanoleaf</b-nav-item>
+      <b-nav-item to="flowerpot">Parrot Flower Pot</b-nav-item>
+    </b-navbar-nav>    
 
     <b-navbar-nav class="ml-auto">
-       <toggle-button class= "button" 
+       <toggle-button v-model="demonstratieModus" class= "button" 
           :value="false"
-          :color="{checked: '#75a175', unchecked: '#CCCCCC'}"
+          :color="{checked: '#42b983', unchecked: '#CCCCCC'}"
           :sync="true"
           :width="230"
           :height="40"
@@ -26,7 +30,7 @@
 export default {
     data() {
       return {
-        myToggle: false
+        demonstratieModus: false
       }
     }
 }
@@ -35,6 +39,14 @@ export default {
 <style>
 .navbar {
   position: relative;
+}
+
+.router-link-active {
+  color: #42b983 !important;
+}
+
+.brand {
+  width: 50px;
 }
 
 .button {
