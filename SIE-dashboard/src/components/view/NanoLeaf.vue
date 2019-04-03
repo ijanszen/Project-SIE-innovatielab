@@ -1,10 +1,9 @@
 <template>
-  <div>
     <b-container fluid>   
       <b-row>
         <b-col cols="8">Grafiek</b-col>
 
-        <b-col> Detailbeschrijving
+        <b-col>
           <DeviceDescription> 
             <template #header>NanoLeaf</template>
             <template #default>
@@ -17,7 +16,6 @@
       
 
     </b-container>
-    </div>
 </template>
 
 <script>

@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <NavBar />
-     <router-view class="view"></router-view>
-    <carousel :per-page="1" :navigate-to="someLocalProperty" :mouse-drag="false" :autoplay="true" :autoplayTimeout="10000" :loop="true">
-      <slide>
-        <Home />
-      </slide>
-      <slide>
-        Slide 2 Content
-      </slide>
-    </carousel>
+    <NavBar/>
+      <router-view class="view"></router-view>
   </div>
 </template>
 
 <script>
-import NavBar from './components/layout/NavBar'
-import Home from './components/view/Home';
-
-import Vue from 'vue';
-import VueCarousel from 'vue-carousel';
-
-Vue.use(VueCarousel);
+import NavBar from "./components/layout/NavBar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar,
-    Home
+    NavBar
   }
-}
+};
 </script>
+
+<style scoped>
+.view {
+  margin-top: 2%;
+}
+</style>

@@ -1,5 +1,4 @@
 <template>
-  <div>
     <b-navbar variant="light" style="background-color: #e3f2fd;" type="light">
     <b-navbar-nav > 
       <b-link to="home" router-tag="b-nav-item">Home</b-link>
@@ -9,13 +8,21 @@
     </b-navbar-nav>
 
     <b-navbar-nav class="ml-auto">
-       <b-button :pressed.sync="myToggle" variant="outline-info"> Demo modus</b-button>
+       <toggle-button class= "button" 
+          :value="false"
+          :color="{checked: '#75a175', unchecked: '#CCCCCC'}"
+          :sync="true"
+          :width="230"
+          :height="40"
+          :font-size="15"
+          :labels="{checked: 'Demonstratiemodus: Aan', unchecked: 'Demonstratiemodus: Uit'}"/>
     </b-navbar-nav>
   </b-navbar>
-  </div>
 </template>
 
 <script>
+
+
 export default {
     data() {
       return {
@@ -28,5 +35,9 @@ export default {
 <style>
 .navbar {
   position: relative;
+}
+
+.button {
+  margin-top: 2%;
 }
 </style>
