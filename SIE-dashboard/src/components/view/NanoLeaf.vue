@@ -9,7 +9,7 @@
             <template #default>
               De nanoleaf is cool want je kan allemaal losse lampen aan elkaar aansluiten en daarom vet koele lichtjes enzo       
             </template>   
-            <template #photo><img class="img" src="../../assets/devices/Netatmo.jpg"></template>     
+            <template #photo><img class="img" src="../../assets/devices/Nanoleaf.jpg"></template>     
           </DeviceDescription>
         </b-col>  
       </b-row>
@@ -32,7 +32,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .img {
-     max-width: 50%;
+     max-width: 100%;
      height: auto;
   }
 </style>

@@ -6,7 +6,7 @@
           <DeviceDescription>
             <template #header>Parrot Flower Pot</template>
             <template #default>Abi smart bloemenpot wat wil je nog meer weten</template>
-            <template #photo></template>
+            <template #photo><img class="img" src="../../assets/devices/Parrot Connected Flower Pot.jpg"></template>     
           </DeviceDescription>
         </b-col>
       </b-row>
@@ -25,4 +25,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.img {
+  max-width: 100%;
+  height: auto;
+}
 </style>
