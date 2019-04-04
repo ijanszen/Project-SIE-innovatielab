@@ -2,7 +2,9 @@
   <div>
     <b-container fluid>   
       <b-row>
-        <b-col cols="8">Grafiek</b-col>
+        <b-col cols="8">Grafiek
+          <LineChart />
+        </b-col>
 
         <b-col> Detailbeschrijving
           <DeviceDescription> 
@@ -32,11 +34,12 @@
 
 <script>
 import DeviceDescription from '../common/DeviceDescription.vue'
-
+import LineChart from '../common/Graph'
 
 export default {
   components: {
     DeviceDescription,
+    LineChart
   }
 }
 </script>
