@@ -3,7 +3,7 @@
     <b-container fluid>   
       <b-row>
         <b-col cols="8">Grafiek
-          <LineChart />
+          <LineChart  />
         </b-col>
 
         <b-col> Detailbeschrijving
