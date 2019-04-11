@@ -4,12 +4,20 @@ import $ from 'jquery'
 
 export default {
     extends: Line,
+    props: ['API'],
+    watch: {
+        API: function(n, o) {
+            //Iedere keer als de prop "API" een ander waarde krijgt zal er een nieuwe datacollection voor de chart gemaakt worden.
+            //De juiste API-call wordt gemaakt op basis van de waarde van de prop "API".
+            this.datacollection = {labels: this.createLabel(6, 720), datasets: this.getData(n)}
+        }
+    },
     data() {
         return{
             datacollection: {
                 //Data to be represented on x-axis
-                labels: this.createLabel(120),
-                datasets: this.retrieveDataSets()
+                labels: this.createLabel(6, 720),
+                datasets: this.getData(this.$props.API),
             },
             //Chart.js options that controls the appearance of the chart
             options: {
@@ -25,7 +33,10 @@ export default {
                     xAxes: [ {
                         gridLines: {
                             display: false
-                        }       
+                        },
+                        ticks: {
+                            autoSkip: false
+                        }
                     }]
                 },
                 legend: {
@@ -33,45 +44,15 @@ export default {
                 },
                 responsive: true,
                 maintainAspectRatio: false
-            },
-            settings: {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://api.beebotte.com/v1/data/read/NetAtmo/Co2?limit=4&source=raw&time-range=current-week",
-                "method": "GET",
-                "headers": {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json",
-                    "Authorization": "WidakEvwajDNKL7BNVvHhqFI:lxX0Ov9YJOBxz6OUiJdcjWR+0og=",
-                    "cache-control": "no-cache",
-                    "Postman-Token": "bd2e8310-8b81-4d12-a293-32f0e191dd9e"
-                },
-                "processData": false,
-                "data": ""
             }
         }
     },
-    mounted() {
-        // this.renderChart(this.datacollection, this.options)
-    },
     methods: {
-        firstMethod: function(api) {
-
-            //Dit verhaal met URL en AUTH misschien niet wenselijk, is voor testdoeleinden
-            var URL;
-            var AUTH;
-            if(api == "Co2") {
-                URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Co2?limit=120&source=raw&time-range=current-week"
-                AUTH = "WidakEvwajDNKL7BNVvHhqFI:fj50MegQbZJsyGrm9lojvIDZLh4="
-            } else if(api == "Noise") {
-                URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Noise?limit=120&source=raw&time-range=current-week"
-                AUTH = "WidakEvwajDNKL7BNVvHhqFI:L0zee60Ugx28jiDBowWQlSDMapc="
-            } else if(api == "Pressure") {
-                URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Pressure?limit=120&source=raw&time-range=current-week"
-                AUTH = "WidakEvwajDNKL7BNVvHhqFI:vvbvZvbnfU0AYhFkXgN5IDIHhc8="
-            }
-
+        getData: function(api) {
+            var URL = this.getUrlAndAuth(api).URL
+            var AUTH = this.getUrlAndAuth(api).AUTH
             var list = [];
+
             $.ajax({
                 "async": true,
                 "crossDomain": true,
@@ -81,78 +62,80 @@ export default {
                     "Accept": "application/json",
                     "Content-Type": "application/json",
                     "Authorization": AUTH,
-                    "cache-control": "no-cache",
-                    "Postman-Token": "bd2e8310-8b81-4d12-a293-32f0e191dd9e"
+                    "cache-control": "no-cache"
                 },
                 "processData": false,
                 "data": ""
             }).done(function (response) {
                 for (var i = 0; i < response.length; i++) {
-                    list.push(response[i].data)
+                    list.unshift(response[i].data)                    
                 }
             })
+            var dataSet = {
+                radius: 0,
+                lineTension: 0,
+                fill: false,
+                label: api,
+                borderColor: 'blue',
+                pointBackgroundColor: 'white',
+                borderWidth: 2,
+                pointBorderColor: '#249EBF',
+                //Data to be represented on y-axis
+                data: list
+            }
             setTimeout(() => {
                 this.renderChart(this.datacollection, this.options)
             }, 1000);
-            return list;
+            return [dataSet]
         },
-        createLabel(num) {
-            var interval = num / 4;
+
+        getUrlAndAuth(api){
+            var obj = {URL: null, AUTH: null}
+            if(api == "Co2") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Co2?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:Ei5JjEoeKVZ217l1FxCmWlwCLLY="
+            } else if(api == "Noise") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Noise?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:XU5YDRrAqbIUeLGDrTxTMmvuOFs="
+            } else if(api == "Pressure") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Pressure?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:z9lzz0FxbuKBTGvrm7eM6/BxQoU="
+            } else if(api == "WiFi_stat") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/WiFi_stat?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:XR9HCBi709TUW8am7hpapPjPdwo="
+            } else if(api == "Humidity") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Humidity?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:3MqTOX2aiLfZQCNE3bDttZzWmls="
+            } else if(api == "Temperature") {
+                obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Temperature?limit=720&source=raw&time-range=6hour"
+                obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:n1altpCduqLeEtEf4i6fGA3Ezu0="
+            }
+            return obj  
+        },
+        //Functie waarmee de labels voor de grafiek gegenereerd kunnen worden.
+        //Het aantal datapunten en het aantal labels op de x-as moeten gelijk zijn, dus er moet een lijst gemaakt worden van labels.
+        //Om de grafiek leesbaar te houden krijgen de meeste datapunten een lege string als label.
+        //labelNum = het aantal labels dat je wil hebben in de grafiek
+        //dataNum = het aantal datapunten dat uit de api komt
+        createLabel(labelNum, dataNum) {
+            var interval = dataNum / labelNum;
             var intervalCounter = 0;
             var labelList = []
-            for( var i = 0; i < num; i++){
-                if(i == 0) {
-                    labelList.push("Label")
-                }
-                 if (intervalCounter >= interval -1) {
-                    labelList.push("Label")
+
+            var currentHour = new Date().getHours()
+
+            for( var i = 0; i < dataNum; i++){
+                if(i == 0 || intervalCounter >= interval -1) {
+                    labelList.push(currentHour - labelNum)
                     intervalCounter = 0;
-                } else {
+                    labelNum --
+                } 
+                else {
                     labelList.push("")
                     intervalCounter ++
                 }
             }
             return labelList
-        },
-        retrieveDataSets() {
-            //Dit is niet wenselijk op deze manier, was voor testdoeleinden
-            var dataSet = [
-                    {
-                    radius: 0,
-                    lineTension: 0,
-                    fill: false,
-                    label: 'Co2',
-                    borderColor: 'blue',
-                    pointBackgroundColor: 'white',
-                    borderWidth: 2,
-                    pointBorderColor: '#249EBF',
-                    //Data to be represented on y-axis
-                    data: this.firstMethod("Co2")
-                    },{
-                    radius: 0,
-                    lineTension: 0,
-                    fill: false,
-                    label: 'Noise',
-                    borderColor: '#b21901',
-                    pointBackgroundColor: 'white',
-                    borderWidth: 2,
-                    pointBorderColor: '#249EBF',
-                    //Data to be represented on y-axis
-                    data: this.firstMethod("Noise")
-                    },{
-                    radius: 0,
-                    lineTension: 0,
-                    fill: false,
-                    label: 'Pressure',
-                    borderColor: 'green',
-                    pointBackgroundColor: 'white',
-                    borderWidth: 2,
-                    pointBorderColor: '#249EBF',
-                    //Data to be represented on y-axis
-                    data: this.firstMethod("Pressure")
-                    }
-                ]
-            return dataSet;
         }
     }
 }
