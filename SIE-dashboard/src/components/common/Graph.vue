@@ -1,24 +1,27 @@
 <script>
 import { Line } from 'vue-chartjs'
 import $ from 'jquery'
+import { setTimeout } from 'timers';
 
 export default {
     extends: Line,
     props: ['API'],
     watch: {
         API: function(n, o) {
-            //Iedere keer als de prop "API" een ander waarde krijgt zal er een nieuwe datacollection voor de chart gemaakt worden.
-            //De juiste API-call wordt gemaakt op basis van de waarde van de prop "API".
-            this.datacollection = {labels: this.createLabel(6, 720), datasets: this.getData(n)}
+            //Iedere keer als de prop "API" een ander waarde krijgt zal er opnieuw data opgehaald worden via een API.
+            //De juiste API-call wordt gemaakt op basis van de waarde van de prop "API". De waardes kunnen zijn: "Noise", "Co2", "Pressure", etc...
+            this.datacollection = this.getDataCollection()
+            // this.datacollection = {labels: this.createLabel(6, sessionStorage.getItem("dataNum")), datasets: this.getData(n)}
         }
     },
     data() {
         return{
-            datacollection: {
-                //Data to be represented on x-axis
-                labels: this.createLabel(6, 720),
-                datasets: this.getData(this.$props.API),
-            },
+            datacollection: this.getDataCollection(),
+            // datacollection: {
+            //     //Data to be represented on x-axis
+            //     datasets: this.getData(this.$props.API),
+            //     labels: this.createLabel(6, sessionStorage.getItem("dataNum"))
+            // },
             //Chart.js options that controls the appearance of the chart
             options: {
                 scales: {
@@ -48,6 +51,20 @@ export default {
         }
     },
     methods: {
+        //Vue Chart.Js wil voor de grafiek een object met daarin de keys: 'datasets' en 'labels'
+        getDataCollection() {
+            var obj = {
+                datasets: this.getData(this.$props.API),
+              //  labels: this.createLabel(6, this.$props.dataNum)
+            }
+            
+            setTimeout(() => {
+                obj.labels = this.createLabel(6, obj.datasets[0].data.length)
+                this.renderChart(this.datacollection, this.options)
+            }, 1500);
+
+            return obj
+        },
         getData: function(api) {
             var URL = this.getUrlAndAuth(api).URL
             var AUTH = this.getUrlAndAuth(api).AUTH
@@ -68,9 +85,11 @@ export default {
                 "data": ""
             }).done(function (response) {
                 for (var i = 0; i < response.length; i++) {
-                    list.unshift(response[i].data)                    
+                    sessionStorage.setItem("dataNum", response.length)
+                    list.unshift(response[i].data)      
                 }
             })
+
             var dataSet = {
                 radius: 0,
                 lineTension: 0,
@@ -83,9 +102,6 @@ export default {
                 //Data to be represented on y-axis
                 data: list
             }
-            setTimeout(() => {
-                this.renderChart(this.datacollection, this.options)
-            }, 1000);
             return [dataSet]
         },
 
@@ -115,7 +131,7 @@ export default {
         //Functie waarmee de labels voor de grafiek gegenereerd kunnen worden.
         //Het aantal datapunten en het aantal labels op de x-as moeten gelijk zijn, dus er moet een lijst gemaakt worden van labels.
         //Om de grafiek leesbaar te houden krijgen de meeste datapunten een lege string als label.
-        //labelNum = het aantal labels dat je wil hebben in de grafiek
+        //labelNum = het aantal labels dat je wilt hebben in de grafiek
         //dataNum = het aantal datapunten dat uit de api komt
         createLabel(labelNum, dataNum) {
             var interval = dataNum / labelNum;
@@ -139,7 +155,4 @@ export default {
         }
     }
 }
-
-
-
 </script>
