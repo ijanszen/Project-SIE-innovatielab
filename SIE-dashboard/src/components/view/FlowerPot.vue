@@ -6,7 +6,7 @@
 
         <b-col> Detailbeschrijving
       <DeviceDescription> 
-        <template  #header> Parrot Flower Pot</template>
+        <template #header> Parrot Flower Pot</template>
         <template #default> Abi smart bloemenpot wat wil je nog meer weten</template>   
         <template #photo></template>
       </DeviceDescription>

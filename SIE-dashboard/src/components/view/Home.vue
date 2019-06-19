@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
       <h1> Huis abi </h1>
-
-
-  
   </div>
 </template>
 

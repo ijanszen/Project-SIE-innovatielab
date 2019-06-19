@@ -15,7 +15,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
-const NotFound = { template: '<h1> Page not found, how did you get here? </h1>' }
 
 const router = new VueRouter({
   mode: 'history',
