@@ -1,8 +1,16 @@
 <template>
     <b-container fluid>
       <b-row>
-        <b-col cols="8">insert grafiek</b-col>
-
+        <b-col cols="8">Grafiek
+          <button v-on:click="switchResource('Co2')">Co2</button>
+          <button v-on:click="switchResource('Noise')">Noise</button>
+          <button v-on:click="switchResource('Pressure')">Pressure</button>
+          <button v-on:click="switchResource('WiFi_stat')">Wifi stat</button>
+          <button v-on:click="switchResource('Humidity')">Humidity</button>
+          <button v-on:click="switchResource('Temperature')">Temperature</button>
+          <LineChart :API="this.Resource" />
+        </b-col>
+        
         <b-col>
           <DeviceDescription>
             <template #header>Netatmo</template>
@@ -27,11 +35,27 @@
 </template>
 
 <script>
-import DeviceDescription from "../common/DeviceDescription.vue";
+import DeviceDescription from '../common/DeviceDescription.vue'
+import LineChart from '../common/Graph'
+
+var Co2 = "Co2"
 
 export default {
   components: {
-    DeviceDescription
+    DeviceDescription,
+    LineChart
+  },
+  data() {
+    return {
+      Resource: "Co2"
+    }
+  },
+  methods: {
+    switchResource(value) {
+      if(this.Resource != value) {
+        this.Resource = value;
+      }
+    }
   }
 };
 </script>

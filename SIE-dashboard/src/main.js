@@ -9,10 +9,6 @@ import NanoLeaf from './components/view/NanoLeaf'
 import Home from './components/view/Home'
 import FlowerPot from './components/view/FlowerPot'
 
-
-
-
-// Import base styles
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
