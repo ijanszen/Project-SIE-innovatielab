@@ -34,7 +34,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  //routes, not this
   render: h => h(App)
 })
 

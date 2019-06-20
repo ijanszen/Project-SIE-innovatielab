@@ -1,7 +1,6 @@
 <template>
   <b-container fluid>   
     <b-row>
-      <b-col cols="8">Grafiek</b-col>
       <b-col>
         <NanoLeafDescription />
       </b-col>  

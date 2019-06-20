@@ -1,5 +1,5 @@
 <template>
-  <b-card header-tag="header" img src="../../../assets/logo.png" >
+  <b-card no-body header-tag="header" img src="../../../assets/logo.png" >
     <b-card-header class="display-4">
       <slot name="header">Apparaatnaam</slot>
     </b-card-header>
@@ -7,16 +7,10 @@
       <slot>Apparaatbeschrijving</slot>
     </b-card-text>
     <slot align="bottom" name="photo"></slot>
-  </b-card>
-  
+  </b-card>  
 </template>
 
 <script>
-export default {
-  props: {
-    msg: String
-  }
-};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
