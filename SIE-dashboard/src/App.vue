@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <NavBar />
-     <router-view class="view"></router-view>
+    <NavBar/>
+      <router-view class="view"></router-view>
   </div>
 </template>
 
 <script>
-import NavBar from './components/layout/NavBar'
+import NavBar from "./components/layout/NavBar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavBar
   }
-}
+};
 </script>
+
+<style scoped>
+.view {
+  margin-top: 2%;
+}
+</style>
