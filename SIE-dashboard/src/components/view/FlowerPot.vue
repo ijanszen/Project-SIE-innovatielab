@@ -3,30 +3,22 @@
       <b-row>
         <b-col cols="8">Grafiek</b-col>
         <b-col>
-          <DeviceDescription>
-            <template #header>Parrot Flower Pot</template>
-            <template #default>Abi smart bloemenpot wat wil je nog meer weten</template>
-            <template #photo><img class="img" src="../../assets/devices/Parrot Connected Flower Pot.jpg"></template>     
-          </DeviceDescription>
+          <flower-pot-description/>
         </b-col>
       </b-row>
     </b-container>
 </template>
 
 <script>
-import DeviceDescription from "../common/DeviceDescription.vue";
+import FlowerPotDescription from "../common/DeviceDescriptions/FlowerPotDescription.vue";
 
 export default {
   components: {
-    DeviceDescription
+    FlowerPotDescription
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.img {
-  max-width: 100%;
-  height: auto;
-}
 </style>

@@ -10,39 +10,23 @@
           <button v-on:click="switchResource('Temperature')">Temperature</button>
           <LineChart :API="this.Resource" />
         </b-col>
-        
+         
         <b-col>
-          <DeviceDescription>
-            <template #header>Netatmo</template>
-            <template #default>
-              De Netatmo is een klein weerstation waarmee onder andere de luchtkwaliteit gemeten kan worden van een kamer.
-              Met de netatmo kunnen de volgende waardes gemeten worden:
-              <ul>
-                <li>Temperatuur</li>
-                <li>Luchtvochtigheid</li>
-                <li>CO2</li>
-                <li>Geluidsniveau</li>
-                <li>luchtkwaliteit</li>
-              </ul>
-            </template>
-            <template #photo>
-              <img class="img" src="../../assets/devices/Netatmo.jpg">
-            </template>
-          </DeviceDescription>
+           <netatmo-description />
         </b-col>
       </b-row>
     </b-container>
 </template>
 
 <script>
-import DeviceDescription from '../common/DeviceDescription.vue'
+import NetatmoDescription from '../common/DeviceDescriptions/NetatmoDescription.vue'
 import LineChart from '../common/Graph'
 
 var Co2 = "Co2"
 
 export default {
   components: {
-    DeviceDescription,
+    NetatmoDescription,
     LineChart
   },
   data() {

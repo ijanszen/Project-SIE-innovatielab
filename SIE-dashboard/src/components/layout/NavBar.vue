@@ -9,6 +9,7 @@
       <b-nav-item to="netatmo">Netatmo</b-nav-item>
       <b-nav-item to="nanoleaf">Nanoleaf</b-nav-item>
       <b-nav-item to="flowerpot">Parrot Flower Pot</b-nav-item>
+      <b-nav-item to="about">About</b-nav-item>
     </b-navbar-nav>    
 
     <b-navbar-nav class="ml-auto">

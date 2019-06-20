@@ -1,30 +1,21 @@
 <template>
-    <b-container fluid>   
-      <b-row>
-        <b-col cols="8">Grafiek</b-col>
-
-        <b-col>
-          <DeviceDescription> 
-            <template #header>NanoLeaf</template>
-            <template #default>
-              De nanoleaf is cool want je kan allemaal losse lampen aan elkaar aansluiten en daarom vet koele lichtjes enzo       
-            </template>   
-            <template #photo><img class="img" src="../../assets/devices/Nanoleaf.jpg"></template>     
-          </DeviceDescription>
-        </b-col>  
-      </b-row>
-      
-
-    </b-container>
+  <b-container fluid>   
+    <b-row>
+      <b-col cols="8">Grafiek</b-col>
+      <b-col>
+        <NanoLeafDescription />
+      </b-col>  
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import DeviceDescription from '../common/DeviceDescription.vue'
+import NanoLeafDescription from '../common/DeviceDescriptions/NanoLeafDescription.vue'
 
 
 export default {
   components: {
-    DeviceDescription,
+    NanoLeafDescription,
   }
 }
 </script>

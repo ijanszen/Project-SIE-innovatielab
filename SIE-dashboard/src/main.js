@@ -8,6 +8,7 @@ import Netatmo from './components/view/Netatmo'
 import NanoLeaf from './components/view/NanoLeaf'
 import Home from './components/view/Home'
 import FlowerPot from './components/view/FlowerPot'
+import About from './components/view/About'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -25,6 +26,7 @@ const router = new VueRouter({
     { path: '/flowerpot', name: 'flowerpot', component: FlowerPot },
     { path: '/netatmo', name: 'netatmo', component: Netatmo },
     { path: '/nanoleaf', name: 'projectdetails', component: NanoLeaf },
+    { path: '/about', name: 'about', component: About },
     { path: "*", component: Home }
   ]
 })
