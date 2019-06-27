@@ -55,11 +55,11 @@ export default {
         getDataCollection() {
             var obj = {
                 datasets: this.getData(this.$props.API),
-              //  labels: this.createLabel(6, this.$props.dataNum)
+              //  labels: this.createLabels(6, this.$props.dataNum)
             }
             
             setTimeout(() => {
-                obj.labels = this.createLabel(6, obj.datasets[0].data.length)
+                obj.labels = this.createLabels(5, obj.datasets[0].data.length)
                 this.renderChart(this.datacollection, this.options)
             }, 1500);
 
@@ -128,30 +128,30 @@ export default {
             }
             return obj  
         },
-        //Functie waarmee de labels voor de grafiek gegenereerd kunnen worden.
-        //Het aantal datapunten en het aantal labels op de x-as moeten gelijk zijn, dus er moet een lijst gemaakt worden van labels.
-        //Om de grafiek leesbaar te houden krijgen de meeste datapunten een lege string als label.
-        //labelNum = het aantal labels dat je wilt hebben in de grafiek
-        //dataNum = het aantal datapunten dat uit de api komt
-        createLabel(labelNum, dataNum) {
-            var interval = dataNum / labelNum;
+
+        createLabels(numberOfLabels, numberOfDataPoints) {
+            var intervalBetweenLabels = numberOfDataPoints / numberOfLabels;
             var intervalCounter = 0;
-            var labelList = []
+            var xAxisLabels = []
 
-            var currentHour = new Date().getHours()
+            var currentDate = new Date()
 
-            for( var i = 0; i < dataNum; i++){
-                if(i == 0 || intervalCounter >= interval -1) {
-                    labelList.push(currentHour - labelNum)
+        
+
+            for( var i = 0; i < numberOfDataPoints; i++){
+                if(i == 0 || intervalCounter >= intervalBetweenLabels -1) {
+                    xAxisLabels.push(currentDate.getHours() - numberOfLabels + ":" + currentDate.getMinutes())
                     intervalCounter = 0;
-                    labelNum --
-                } 
+                    numberOfLabels --
+                } else if (i + 1 == numberOfDataPoints) {
+                    xAxisLabels.push(currentDate.getHours() + ":" + currentDate.getMinutes())
+                }
                 else {
-                    labelList.push("")
+                    xAxisLabels.push("")
                     intervalCounter ++
                 }
             }
-            return labelList
+            return xAxisLabels
         }
     }
 }
