@@ -8,20 +8,15 @@ export default {
     props: ['API'],
     watch: {
         API: function(n, o) {
-            //Iedere keer als de prop "API" een ander waarde krijgt zal er opnieuw data opgehaald worden via een API.
-            //De juiste API-call wordt gemaakt op basis van de waarde van de prop "API". De waardes kunnen zijn: "Noise", "Co2", "Pressure", etc...
+            //This function realigns the data points in the chart whenever the user selects another source in the front-end
             this.datacollection = this.getDataCollection()
-            // this.datacollection = {labels: this.createLabel(6, sessionStorage.getItem("dataNum")), datasets: this.getData(n)}
         }
     },
     data() {
         return{
+            //With Vue Chart.js the chart needs to be build with a JSON-object with specific object names, like so:
+            // datacollection: { datasets: [<List of data points>] , labels: [<List of strins>]}
             datacollection: this.getDataCollection(),
-            // datacollection: {
-            //     //Data to be represented on x-axis
-            //     datasets: this.getData(this.$props.API),
-            //     labels: this.createLabel(6, sessionStorage.getItem("dataNum"))
-            // },
             //Chart.js options that controls the appearance of the chart
             options: {
                 scales: {
@@ -51,27 +46,27 @@ export default {
         }
     },
     methods: {
-        //Vue Chart.Js wil voor de grafiek een object met daarin de keys: 'datasets' en 'labels'
         getDataCollection() {
-            var obj = {
+            var chartJsonObject = {
                 datasets: this.getData(this.$props.API),
-              //  labels: this.createLabels(6, this.$props.dataNum)
             }
             
+            //Wait half a second for the API-call to finish so we can render the chart correctly
             setTimeout(() => {
-                obj.labels = this.createLabels(5, obj.datasets[0].data.length)
+                chartJsonObject.labels = this.arrangeGraphLabels(5, chartJsonObject.datasets[0].data.length)
                 this.renderChart(this.datacollection, this.options)
-            }, 1500);
+            }, 500);
 
-            return obj
+            return chartJsonObject
         },
+
         getData: function(api) {
             var URL = this.getUrlAndAuth(api).URL
             var AUTH = this.getUrlAndAuth(api).AUTH
             var list = [];
 
             $.ajax({
-                "async": true,
+                "async": SVGComponentTransferFunctionElement,
                 "crossDomain": true,
                 "url": URL,
                 "method": "GET",
@@ -99,7 +94,7 @@ export default {
                 pointBackgroundColor: 'white',
                 borderWidth: 2,
                 pointBorderColor: '#249EBF',
-                //Data to be represented on y-axis
+                //Data points to be represented on y-axis
                 data: list
             }
             return [dataSet]
@@ -107,6 +102,7 @@ export default {
 
         getUrlAndAuth(api){
             var obj = {URL: null, AUTH: null}
+            //The MQTT-Service 'Beebotte' has authorization keys for every API-call
             if(api == "Co2") {
                 obj.URL = "https://api.beebotte.com/v1/data/read/NetAtmo/Co2?limit=720&source=raw&time-range=6hour"
                 obj.AUTH = "WidakEvwajDNKL7BNVvHhqFI:Ei5JjEoeKVZ217l1FxCmWlwCLLY="
@@ -129,22 +125,24 @@ export default {
             return obj  
         },
 
-        createLabels(numberOfLabels, numberOfDataPoints) {
+        arrangeGraphLabels(numberOfLabels, numberOfDataPoints) {
             var intervalBetweenLabels = numberOfDataPoints / numberOfLabels;
             var intervalCounter = 0;
             var xAxisLabels = []
 
             var currentDate = new Date()
 
-        
+
 
             for( var i = 0; i < numberOfDataPoints; i++){
                 if(i == 0 || intervalCounter >= intervalBetweenLabels -1) {
-                    xAxisLabels.push(currentDate.getHours() - numberOfLabels + ":" + currentDate.getMinutes())
+                    xAxisLabels.push(this.createLabel(currentDate, numberOfLabels))
+                    
                     intervalCounter = 0;
                     numberOfLabels --
+
                 } else if (i + 1 == numberOfDataPoints) {
-                    xAxisLabels.push(currentDate.getHours() + ":" + currentDate.getMinutes())
+                    xAxisLabels.push(this.createLabel(currentDate, numberOfLabels))
                 }
                 else {
                     xAxisLabels.push("")
@@ -152,6 +150,16 @@ export default {
                 }
             }
             return xAxisLabels
+        }, 
+        
+        createLabel(currentDate, numberOfLabels) {
+            var label; 
+            if(currentDate.getMinutes() <= 9) {
+                return currentDate.getHours() - numberOfLabels + ":0" + currentDate.getMinutes()
+            } else {
+                return currentDate.getHours() - numberOfLabels + ":" + currentDate.getMinutes()
+            }
+            return label;
         }
     }
 }

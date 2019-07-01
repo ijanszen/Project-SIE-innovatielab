@@ -5,9 +5,6 @@
         <NanoLeafDescription/>
       </b-col>
       <b-col>
-        <nano-leaf-table/>
-      </b-col>
-      <b-col>
         <b-button-group vertical>
           <b-button v-on:click="switchResource('Co2')">Co2</b-button>
           <b-button  v-on:click="switchResource('Noise')">Noise</b-button>
@@ -37,7 +34,7 @@ export default {
       $.ajax({
                 "async": true,
                 "crossDomain": true,
-                "url": "http://192.168.3.157:1880/dashboard?display=" + value,
+                "url": "http://192.168.3.157:1880/dashboard?display=" + value.toLowerCase(),
                 "method": "GET",
                 "headers": {
                     "Accept": "application/json",

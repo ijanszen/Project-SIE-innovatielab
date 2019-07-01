@@ -3,7 +3,7 @@
     <b-row>
       <b-col>
         <b-button-group vertical>
-          <b-button :pressed.sync="myToggle" variant="outline-primary" v-on:click="switchResource('Co2')">Co2</b-button>
+          <b-button variant="outline-primary" v-on:click="switchResource('Co2')">Co2</b-button>
           <b-button variant="outline-primary" v-on:click="switchResource('Noise')">Noise</b-button>
           <b-button variant="outline-primary" v-on:click="switchResource('Pressure')">Pressure</b-button>
           <b-button variant="outline-primary" v-on:click="switchResource('WiFi_stat')">Wifi stat</b-button>
