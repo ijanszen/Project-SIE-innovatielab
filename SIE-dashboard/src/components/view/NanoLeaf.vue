@@ -6,6 +6,7 @@
       </b-col>
       <b-col>
         <b-button-group vertical>
+          <b-button v-on:click="switchResource('Off')">Off</b-button>
           <b-button v-on:click="switchResource('Co2')">Co2</b-button>
           <b-button  v-on:click="switchResource('Noise')">Noise</b-button>
           <b-button  v-on:click="switchResource('Pressure')">Pressure</b-button>
