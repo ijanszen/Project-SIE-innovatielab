@@ -2,6 +2,7 @@
   <DeviceDescription>
             <template #header>Netatmo - Smart Indoor Air Quality Monitor</template>
             <template #default>
+              <p>
               Dit device is bedoeld om de luchtkwaliteit te meten. Via hun 
                <b-link href="https://dev.netatmo.com/resources/technical/reference"> api</b-link> 
                kun je de volgende informatie opvragen:
@@ -12,6 +13,7 @@
                 <li>Geluidsniveau</li>
                 <li>luchtkwaliteit</li>
               </ul>
+              </p>
             </template>
             <template #photo>
               <img class="img" src="../../../assets/devices/Netatmo.jpg">
@@ -31,4 +33,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>

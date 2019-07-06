@@ -1,6 +1,6 @@
 <template>
    <DeviceDescription>
-        <template #header>Bluetooth / Eddystone Beacons</template>
+        <template #header>Philips Hue</template>
         <template #default>
           Het slimme verlichtingsysteem van Philips. Voor meer info zie de
           <b-link href="https://developers.meethue.com/ "> website. </b-link>   

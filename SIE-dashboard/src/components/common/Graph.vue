@@ -60,6 +60,7 @@ export default {
             return chartJsonObject
         },
 
+
         getData: function(api) {
             var URL = this.getUrlAndAuth(api).URL
             var AUTH = this.getUrlAndAuth(api).AUTH
@@ -129,10 +130,7 @@ export default {
             var intervalBetweenLabels = numberOfDataPoints / numberOfLabels;
             var intervalCounter = 0;
             var xAxisLabels = []
-
             var currentDate = new Date()
-
-
 
             for( var i = 0; i < numberOfDataPoints; i++){
                 if(i == 0 || intervalCounter >= intervalBetweenLabels -1) {

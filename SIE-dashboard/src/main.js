@@ -27,7 +27,7 @@ const router = new VueRouter({
     { path: '/netatmo', name: 'netatmo', component: Netatmo },
     { path: '/nanoleaf', name: 'projectdetails', component: NanoLeaf },
     { path: '/about', name: 'about', component: About },
-    { path: "*", component: Home }
+    { path: "*", component: Home },
   ]
 })
 
