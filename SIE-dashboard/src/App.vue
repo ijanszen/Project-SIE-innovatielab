@@ -19,13 +19,6 @@ export default {
     return {
       text: "hello"
     }
-  },
-  created() {
-    this.$root.$on('send', (text) => {
-      console.log(this.text)
-      this.text = text;
-      console.log(this.text)
-    })
   }
 };
 </script>

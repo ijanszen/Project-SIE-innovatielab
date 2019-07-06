@@ -49,7 +49,6 @@ export default {
           this.demonstratieModusStatus = "off"
           window.clearInterval(this.timer)
         }
-        this.$root.$emit('send', 'bye')
       },
       cycleThroughComponents() {
         const path = this.$route.path
