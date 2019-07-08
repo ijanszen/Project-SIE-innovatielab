@@ -21,11 +21,15 @@ const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    { path: '/', redirect: { name: 'netatmo' } },
+    { path: '/', redirect: { name: 'home' } },
     { path: '/home', name: 'home', component: Home },
+    { path: '/lametric', redirect: { name: 'lametric' } },
     { path: '/lametric', name: 'lametric', component: LaMetric },
+    { path: '/netatmo', redirect: { name: 'netatmo' } },
     { path: '/netatmo', name: 'netatmo', component: Netatmo },
-    { path: '/nanoleaf', name: 'projectdetails', component: NanoLeaf },
+    { path: '/nanoleaf', redirect: { name: 'nanoleaf' } },
+    { path: '/nanoleaf', name: 'nanoleaf', component: NanoLeaf },
+    { path: '/about', redirect: { name: 'about' } },
     { path: '/about', name: 'about', component: About },
     { path: "*", component: Home },
   ]
