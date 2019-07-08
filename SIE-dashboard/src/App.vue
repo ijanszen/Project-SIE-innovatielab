@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar/>
-    <transition v-if="demoStatus == 'on'" name="router-anim" mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+    <transition v-if="demoStatus == 'on'" name="router-anim" mode="out-in" enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
       <router-view class="view"></router-view>
     </transition>
 

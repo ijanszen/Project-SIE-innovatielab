@@ -41,7 +41,7 @@ export default {
       click() {
         if(this.demonstratieModusStatus == "off") {
           this.demonstratieModusStatus = "on"
-          this.timer=(setInterval(this.cycleThroughComponents, 4000))
+          this.timer=(setInterval(this.cycleThroughComponents, 10000))
           this.setDemoModeOn()
 
         } else if(this.demonstratieModusStatus == "on") {
