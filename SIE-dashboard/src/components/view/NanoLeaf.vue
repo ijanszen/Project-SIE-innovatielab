@@ -26,7 +26,8 @@
               </b-col>
 
               <b-col>
-                <img class="NanoleafImg" src="../../assets/Nanoleaf_Setup.svg"/>
+                <img class="NanoleafImg" src="../../assets/Nanoleaf_Setup.svg"/><br/>
+                <img class="tbl" src="../../assets/kleurentabel.png" >
               </b-col>
 
             </b-row>
@@ -81,7 +82,8 @@ export default {
 .ButtonGroup {
   padding: 20px;
 }
-.test:active {
-  background-color: green;
+.tbl{
+  width: 200px;
+  height: 150px;
 }
 </style>
