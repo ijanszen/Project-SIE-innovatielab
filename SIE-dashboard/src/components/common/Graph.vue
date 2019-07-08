@@ -55,7 +55,7 @@ export default {
             setTimeout(() => {
                 chartJsonObject.labels = this.arrangeGraphLabels(5, chartJsonObject.datasets[0].data.length)
                 this.renderChart(this.datacollection, this.options)
-            }, 500);
+            }, 1500);
 
             return chartJsonObject
         },

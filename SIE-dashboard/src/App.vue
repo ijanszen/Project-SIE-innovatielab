@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <NavBar/>
-    <transition name="router-anim" mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+    <transition v-if="demoStatus == 'on'" name="router-anim" mode="out-in" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
       <router-view class="view"></router-view>
     </transition>
+
+    <router-view class="view" v-if="demoStatus == 'off'"></router-view>
+
   </div>
 </template>
 
@@ -17,8 +20,13 @@ export default {
   },
   data() {
     return {
-      text: "hello"
+      demoStatus: "off"
     }
+  },
+  created() {
+    this.$root.$on('clicked', (demoStatus) => {
+      this.demoStatus = demoStatus;
+    })
   }
 };
 </script>

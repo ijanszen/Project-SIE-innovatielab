@@ -2,8 +2,9 @@
   <DeviceDescription>
     <template #header>NanoLeaf</template>
     <template #default>
-      Een interessante slimme verlichting waarvan de OpenAPI echter op dit moment alleen via een inschrijving voor het Beta Program beschikbaar is. 
-      Voor meer info zie de <b-link href="https://nanoleaf.me/en/consumer-led-lighting/join-beta-program/"> website. </b-link>
+      Op de buitenste twee panelen wordt de health-status afgebeeld.
+      Health-status is een getal van 0 t/m 4 de mogelijke kleuren en de bijbehorende statussen staan weergegeven in Tabel 1.
+      Bij de middelste zeven panelen is de ‘percentage-balk’ hier worden de overige Netatmo-statussen weergegeven in percentage.
     </template>
     <template #photo>
       <img class="img" src="../../../assets/devices/Nanoleaf.jpg">

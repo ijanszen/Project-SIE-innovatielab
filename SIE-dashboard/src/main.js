@@ -7,7 +7,7 @@ import ToggleButton from 'vue-js-toggle-button'
 import Netatmo from './components/view/Netatmo'
 import NanoLeaf from './components/view/NanoLeaf'
 import Home from './components/view/Home'
-import FlowerPot from './components/view/FlowerPot'
+import LaMetric from './components/view/LaMetric'
 import About from './components/view/About'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -23,7 +23,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', redirect: { name: 'netatmo' } },
     { path: '/home', name: 'home', component: Home },
-    { path: '/flowerpot', name: 'flowerpot', component: FlowerPot },
+    { path: '/lametric', name: 'lametric', component: LaMetric },
     { path: '/netatmo', name: 'netatmo', component: Netatmo },
     { path: '/nanoleaf', name: 'projectdetails', component: NanoLeaf },
     { path: '/about', name: 'about', component: About },

@@ -1,4 +1,5 @@
 <template>
+  <img class="image" src="../../assets/Project ontwerp.svg"/>
 </template>
 
 <script>
@@ -6,8 +7,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- div {
-   height: 1080px;
-   background-image: url("../../assets/SpongeBob's_Pineapple.png");
+ .image {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  width: auto;
  }
 </style>

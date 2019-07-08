@@ -1,10 +1,10 @@
 <template>
   <DeviceDescription>
-    <template #header>LaMetric Time</template>
+    <template #header>LaMetric</template>
     <template #default>
-        De LaMetric Time is meer dan alleen een klok. Voor dit bij o.a. veel YouTubers populaire device is op het internet goede 
-        <b-link href="https://lametric-documentation.readthedocs.io/en/latest/reference-docs/lametric-time-reference.html"> API </b-link>
-        documentatie beschikbaar.
+        De LaMetric is een matrix led display dat vaak als klok wordt gebruikt. <br/> 
+        Het is makkelijk aanpasbaar en er kan aparte applicaties voor geschreven worden. <br/>
+        De data uit de Netatmo wordt hierop getoond.
     </template>
     <template #photo>
       <img class="img" src="../../../assets/devices/LaMetric Time.png">
