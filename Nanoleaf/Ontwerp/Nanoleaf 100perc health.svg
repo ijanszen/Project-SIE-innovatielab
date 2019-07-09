@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Gegenereerd door Microsoft Visio, SVG Export Nanoleaf 100perc health.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="28.3981in" height="42.0112in"
+		viewBox="0 0 2044.67 3024.81" xml:space="preserve" color-interpolation-filters="sRGB" class="st7">
+	<v:documentProperties v:langID="1043" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st3 {fill:#70ad47;stroke:#c7c8c8;stroke-width:0.25}
+		.st4 {fill:#70ad47;font-family:Calibri;font-size:4.99999em}
+		.st5 {fill:#4672c4;stroke:#c7c8c8;stroke-width:0.25}
+		.st6 {fill:#4672c4;font-family:Calibri;font-size:4.99999em}
+		.st7 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Pagina-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape10-1" v:mID="10" v:groupContext="shape" transform="translate(3749.16,2213.2) rotate(90)">
+			<title>Driehoek</title>
+			<desc>139</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow10-2" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>139</text>		</g>
+		<g id="shape11-7" v:mID="11" v:groupContext="shape" transform="translate(-1705.18,2549.83) rotate(-90)">
+			<title>Driehoek.11</title>
+			<desc>234</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow11-8" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,-1.97279,0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>234</text>		</g>
+		<g id="shape12-13" v:mID="12" v:groupContext="shape" transform="translate(3749.16,1515.19) rotate(90)">
+			<title>Driehoek.12</title>
+			<desc>201</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow12-14" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>201</text>		</g>
+		<g id="shape14-19" v:mID="14" v:groupContext="shape" transform="translate(-1705.18,1852.51) rotate(-90)">
+			<title>Driehoek.14</title>
+			<desc>117</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow14-20" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,-1.97279,0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>117</text>		</g>
+		<g id="shape15-25" v:mID="15" v:groupContext="shape" transform="translate(3749.16,817.865) rotate(90)">
+			<title>Driehoek.15</title>
+			<desc>200</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow15-26" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>200</text>		</g>
+		<g id="shape22-31" v:mID="22" v:groupContext="shape" transform="translate(-1705.18,1155.19) rotate(-90)">
+			<title>Driehoek.22</title>
+			<desc>104</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow22-32" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,-1.97279,0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>104</text>		</g>
+		<g id="shape23-37" v:mID="23" v:groupContext="shape" transform="translate(3749.16,121.676) rotate(90)">
+			<title>Driehoek.23</title>
+			<desc>243</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow23-38" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st3"/>
+			<text x="297.38" y="2844.38" class="st4" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>243</text>		</g>
+		<g id="shape24-43" v:mID="24" v:groupContext="shape" transform="translate(-2306.13,2201.17) rotate(-90)">
+			<title>Driehoek.24</title>
+			<desc>41</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow24-44" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,-1.97279,0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st5"/>
+			<text x="312.58" y="2844.38" class="st6" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>41</text>		</g>
+		<g id="shape25-49" v:mID="25" v:groupContext="shape" transform="translate(4350.1,469.204) rotate(90)">
+			<title>Driehoek.25</title>
+			<desc>168</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="342.992" cy="2826.38" width="685.99" height="396.85"/>
+			<g id="shadow25-50" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1">
+				<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st2"/>
+			</g>
+			<path d="M685.98 3024.81 L342.99 2429.53 L0 3024.81 L685.98 3024.81 Z" class="st5"/>
+			<text x="297.38" y="2844.38" class="st6" v:langID="1043"><v:paragraph v:horizAlign="1"/><v:tabList/>168</text>		</g>
+	</g>
+</svg>

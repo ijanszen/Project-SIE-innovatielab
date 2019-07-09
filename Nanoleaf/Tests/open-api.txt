@@ -1,0 +1,2 @@
+curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \
+"animType\" : \"static\",\"animData\" : \"4 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20 41 1 255 174 201 0 20\", \"loop\":\"false\"}}"

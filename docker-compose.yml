@@ -1,0 +1,40 @@
+    
+---
+version: '3'
+
+services:
+
+  netatmo:
+    image: eyevo/netatmo
+    container_name: netatmo-beebotte
+    restart: always
+
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    volumes:
+      - /opt/appdata/portainer:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 5100:9000
+
+  dashboard:
+    image: eyevo/dashboard
+    container_name: dashboard
+    restart: always
+    ports:
+      - 8080:80
+  
+  nanoleaf-api:
+    image: eyevo/nanoleaf-api
+    container_name: nanoleaf-api
+    restart: always
+    ports:
+      - 5000:5000
+
+  lametric:
+    image: eyevo/lametric
+    container_name: La_Metric
+    restart: always

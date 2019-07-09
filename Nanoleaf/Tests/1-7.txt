@@ -1,0 +1,13 @@
+1= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”1 139 1 0 255 0 0 20\", \"loop\":\"false\"}}"
+
+2= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”2 139 1 0 255 0 0 20 234 1 0 255 0 0 20\", \"loop\":\"false\"}}"
+
+3= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”3 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20\", \"loop\":\"false\"}}"
+
+4= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \"4 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20 117 1 255 174 201 0 20\", \"loop\":\"false\"}}"
+
+5= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”5 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20 117 1 255 174 201 0 20 200 1 255 174 201 0 20\", \"loop\":\"false\"}}"
+
+6= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”6 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20 117 1 255 174 201 0 20 200 1 255 174 201 0 20 104 1 255 174 201 0 20\", \"loop\":\"false\"}}"
+
+7= curl --location --request PUT "http://192.168.3.192:16021/api/v1/8waBfTkcAQAFDFP1CRoaR6u2pg8ScVio/effects"   --data "{\"write\" : {\"command\" : \"display\", \"animType\" : \"static\",\"animData\" : \”7 139 1 0 255 0 0 20 234 1 0 255 0 0 20 201 1 0 255 0 0 20 117 1 255 174 201 0 20 200 1 255 174 201 0 20 104 1 255 174 201 0 20 243 1 255 174 201 0 20\", \"loop\":\"false\"}}"
